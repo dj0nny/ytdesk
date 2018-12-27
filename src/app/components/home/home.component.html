@@ -10,7 +10,11 @@
     </nav>
   </header>
 
-  <input type="text" placeholder="Channel Username" value="UCVyRiMvfUNMA1UPlDPzG5Ow" (keyup.enter)="channel($event.target.value)">
+  <div class="input-channel">
+      <input type="text" #idchannel placeholder="Channel Username">
+      <button class="add-channel" (click)="channel(idchannel.value)">Add channel</button> <!-- button for adding a new channel -->
+  </div>
+
 
   <main>
     <ng-container *ngFor="let channel of channelInfo.items">
